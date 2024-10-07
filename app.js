@@ -1,23 +1,30 @@
 alert('Boas vindo ao jogo do Número Secreto!');
 
-let numeroMaximo = 20;
+let numeroMaximo = 50;
 let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
-console.log(numeroSecreto);
+//console.log(numeroSecreto);
 let resultado;
 let tentativas = 1;
 
 while (resultado != numeroSecreto) {
     let fraseTentativas = tentativas > 1 ? "tentativas" : "tentativa";
-    resultado = prompt(`Escolha um número entre 1 e ${numeroMaximo}.`);
+    resultado = prompt(`Escolha um número entre #1 e #${numeroMaximo}.`);
 
-    // if (resultado == numeroSecreto) {
-    //     break;
-    // } else if (resultado > numeroSecreto) {
-    //     alert(`O número secreto é menor q #${resultado}.`);
-    // } else {
-    //     alert(`O número secreto é maior q #${resultado}.`);
-    // };
+    // Verifica se o usuário clicou em "Cancelar" ou deixou o campo vazio
+    if (resultado === null || resultado.trim() === '') {
+        alert('Você precisa digitar um número!');
+        continue; // Volta para o início do loop
+    };
 
+    if (resultado === null || isNaN(resultado)) {
+        alert('Por favor, digite APENAS números.');
+        continue;
+    } else if (resultado < 1 || resultado > numeroMaximo) {
+        // alert(`Digite um número entre #1 e #${numeroMaximo}.`);
+        alert('Digite apenas números maior que 1.');
+        continue;
+    };
+    
     // Nova parte para alterar o conteúdo da div ao acertar
     if (resultado == numeroSecreto) {
         const containerConteudo = document.querySelector('.container__conteudo');
@@ -42,15 +49,6 @@ while (resultado != numeroSecreto) {
     } else {
         alert(`O número secreto é maior q #${resultado}.`);
     };
-
-    //tentativas = tentativas + 1;
+    
     tentativas++;
 };
-
-//alert(`Vc descobriu o número secreto q é o #${numeroSecreto} depois de ${tentativas} ${fraseTentativas}!`);
-
-// if(tentativas > 1){
-//     alert(`Vc descobriu o número secreto q é o #${numeroSecreto} depois de ${tentativas} tentativas!`);
-// } else {
-//     alert(`Vc descobriu o número secreto q é o #${numeroSecreto} depois de ${tentativas} tentativa!`);
-// };
