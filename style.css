@@ -86,3 +86,34 @@ h2 {
     font-size: 32px;
     font-weight: 400;
 }
+
+
+/* Responsividade para celulares*/
+@media (max-width: 768px) {
+    body {
+        width: 68vh;
+        height: 132vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        height: 52%;
+        width: 95%;
+        margin-left: 5%;
+    }
+
+    .container .container__conteudo .container__imagem-robo {
+        margin: 0 auto;
+        max-width: 55%;
+    }
+
+    .container .container__conteudo h1 {
+        font-size: 36px;
+    }
+
+    .container .container__conteudo h2 {
+        font-size: 20px;
+    }
+}
