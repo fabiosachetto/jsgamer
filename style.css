@@ -101,7 +101,7 @@ h2 {
     .container {
         height: 52%;
         width: 95%;
-        margin-left: 5%;
+        margin-left: 4vh;
     }
 
     .container .container__conteudo .container__imagem-robo {
