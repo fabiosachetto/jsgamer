@@ -1,4 +1,3 @@
-
 let numeroMaximo = 50;
 let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 console.log(numeroSecreto);
@@ -7,8 +6,7 @@ let tentativas = 1;
 
 // Função para exibir o prompt
 function exibirPrompt() {
-    //resultado = prompt(`Escolha um número entre #1 e #${numeroMaximo}.`);
-    while (resultado != numeroSecreto) {
+    do {
         let fraseTentativas = tentativas > 1 ? "tentativas" : "tentativa";
         resultado = prompt(`Escolha um número entre #1 e #${numeroMaximo}.`);
     
@@ -53,7 +51,7 @@ function exibirPrompt() {
         };
         
         tentativas++;
-    };
+    } while (resultado != numeroSecreto);
 };
 
 // Aguarda 5 segundos (5000 milissegundos) antes de exibir o prompt
