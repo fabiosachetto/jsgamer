@@ -98,14 +98,9 @@ h2 {
         justify-content: center;
     }
 
-    .container {
-        height: 52%;
-        width: 95%;
-    }
-
     .container .container__conteudo .container__imagem-robo {
         margin: 0 auto;
-        max-width: 55%;
+        /* max-width: 55%; */
     }
 
     .container .container__conteudo h1 {
@@ -116,33 +111,3 @@ h2 {
         font-size: 20px;
     }
 }
-
-/* Estilos para modo paisagem */
-/* @media (orientation: landscape) {
-    
-    body {
-        width: 68vh;
-        height: 132vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .container {
-        height: 52%;
-        width: 95%;
-    }
-
-    .container .container__conteudo .container__imagem-robo {
-        margin: 0 auto;
-        max-width: 55%;
-    }
-
-    .container .container__conteudo h1 {
-        font-size: 36px;
-    }
-
-    .container .container__conteudo h2 {
-        font-size: 20px;
-    }
-} */
