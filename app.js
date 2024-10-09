@@ -1,6 +1,6 @@
 let numeroMaximo = 50;
 let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
-console.log(numeroSecreto);
+//console.log(numeroSecreto);
 let resultado;
 let tentativas = 1;
 
